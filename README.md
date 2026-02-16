@@ -19,6 +19,8 @@ This is not a simple chatbot. It is a **ReAct Agent** (Reason + Act) that can au
 * **Reflection Layer:** Implements a self-correction loop where the agent catches its own errors (e.g., invalid Order ID) and retries or asks for clarification.
 * **Evaluation Suite:** Includes a CI/CD-ready test suite using **DeepEval** to measure Faithfulness and Answer Relevancy.
 
+![Agentic Demo](demo_chat.png)
+
 ## 🏗️ Architecture
 
 The system follows a microservice architecture wrapped in Docker.
