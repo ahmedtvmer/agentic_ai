@@ -19,8 +19,6 @@ This is not a simple chatbot. It is a **ReAct Agent** (Reason + Act) that can au
 * **Reflection Layer:** Implements a self-correction loop where the agent catches its own errors (e.g., invalid Order ID) and retries or asks for clarification.
 * **Evaluation Suite:** Includes a CI/CD-ready test suite using **DeepEval** to measure Faithfulness and Answer Relevancy.
 
-![Agentic Demo](demo_chat.png)
-
 ## 🏗️ Architecture
 
 The system follows a microservice architecture wrapped in Docker.
@@ -102,6 +100,19 @@ Once the container is running, the API is accessible at `http://localhost:8000`.
 }
 
 ```
+
+## 💻 User Interface 
+
+While the system operates as a backend microservice, I have included a **Streamlit** frontend to provide a user-friendly chat interface. This allows users to interact with the agent without needing to use API clients like Postman or Swagger.
+
+![Agent Chat Demo](demo_chat.png)
+
+### How to Run the Frontend
+
+1. **Ensure the Backend is Running:**
+   The Streamlit app communicates with the FastAPI server via Docker. Make sure your container is active:
+   ```bash
+   docker run -p 8000:8080 --env-file .env agent-ai:v1
 
 **Example Response:**
 
